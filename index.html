@@ -1,29 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab-4</title>
+    <title>Viajes Virtuales - Lab-4</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Style-i.css">
 </head>
 <body>
+    <!-- Animación de fondo -->
+    <div class="bg-animation">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    
     <header>
         <h1 id="titulo">Viajes Virtuales</h1>
+        <p class="subtitle">Descubre el mundo desde tu pantalla</p>
     </header>
-     <section>
-    <h2>Bienvenidos a Viajes Virtuales</h2>
-    <p>Somos una agencia virtual que te muestra destinos increíbles del mundo. Aquí podrás conocer sugerencias de itinerarios, precios orientativos y recursos multimedia para cada destino.</p>
-    <br>
-    <p>Haz clic en cualquiera de los destinos abajo para ver más detalles.</p>
+    
+    <section>
+        <h2>Bienvenidos a Viajes Virtuales</h2>
+        <p>Somos una agencia virtual que te muestra destinos increíbles del mundo. Aquí podrás conocer sugerencias de itinerarios, precios orientativos y recursos multimedia para cada destino.</p>
+        <p>Haz clic en cualquiera de los destinos abajo para ver más detalles.</p>
     </section>
-    <div class="card">
-        <h3>Destinos</h3>
-        <ul>
-        <li><a href="rusia.html">Ruisa</a></li>
-        <li><a href="Azerbaiyán.html">Azerbaiyán</a></li>
-        <li><a href="bocas.html">**</a></li>
-        <li><a href="nosotros.html">Nosotros (Equipo)</a></li>
-        </ul>
+    
+    <div class="destinations-container">
+        <div class="destination-card">
+            <div class="card-header">
+                <i class="fas fa-snowflake"></i>
+                <h3>Rusia</h3>
+            </div>
+            <div class="card-content">
+                <ul>
+                    <li><a href="rusia.html"><i class="fas fa-arrow-right"></i> Explorar Rusia</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="destination-card">
+            <div class="card-header">
+                <i class="fas fa-mosque"></i>
+                <h3>Azerbaiyán</h3>
+            </div>
+            <div class="card-content">
+                <ul>
+                    <li><a href="Azerbaiyán.html"><i class="fas fa-arrow-right"></i> Descubrir Azerbaiyán</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="destination-card">
+            <div class="card-header">
+                <i class="fas fa-umbrella-beach"></i>
+                <h3>Bocas del Toro</h3>
+            </div>
+            <div class="card-content">
+                <ul>
+                    <li><a href="bocas.html"><i class="fas fa-arrow-right"></i> Visitar Bocas</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="destination-card">
+            <div class="card-header">
+                <i class="fas fa-users"></i>
+                <h3>Nuestro Equipo</h3>
+            </div>
+            <div class="card-content">
+                <ul>
+                    <li><a href="nosotros.html"><i class="fas fa-arrow-right"></i> Conocer al equipo</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
-
+    
+    <div class="floating-btn">
+        <i class="fas fa-plane"></i>
+    </div>
+    
+    <footer>
+        
+        <p>Desarrollo de Software # 5.</p>
+    </footer>
 </body>
 </html>
