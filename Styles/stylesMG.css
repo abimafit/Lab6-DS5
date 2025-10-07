@@ -1,0 +1,231 @@
+/* styles.css */
+
+/*
+* 1. ESTILOS GLOBALES
+* Fondo en beige claro (#FDF5E6)
+*/
+body {
+    background: linear-gradient(135deg, #fffcf0 0%, #b2f0ea 100%);
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal para centrar el contenido */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fffef8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* 2. ESTILOS DE TÍTULOS (Azul Marino y Turquesa) */
+.main-title {
+    text-align: center;
+    font-family: 'Playfair Display', 'Times New Roman', serif; /* Fuente elegante */
+    font-size: 3em;
+    color: #098e85; /* Blanco puro para alto contraste */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 25px 0;
+    position: relative;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Sombra suave para dar relieve */
+    background: none;
+    border-bottom: none;
+}
+
+.main-title::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #25b7a8; /* Línea blanca elegante */
+    margin: 10px auto 0;
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+.section-title {
+    font-family: 'Playfair Display', 'Times New Roman', serif; 
+    text-align: center;
+    color: #000080; /* Azul profundo que combina con el fondo */
+    margin: 40px 0 20px 0;
+    font-size: 2em;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+
+
+.tours-table h3 {
+    color: #000080; /* Azul Marino para subtítulos de tours */
+    font-size: 1.2em;
+}
+
+/* 3. ESTILOS DE TABLAS Y CONTENIDO */
+
+/* Tabla principal de contenido */
+.content-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.paragraph {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* Contenedor de imagen centrado */
+.image-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tabla de tours */
+.tours-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 15px;
+    margin-top: 30px;
+}
+
+.tour-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    vertical-align: top;
+    border-radius: 8px;
+    background-color: #ffffff;
+    /* ✨ Nueva sombra elegante en tonos verde agua-turquesa */
+    box-shadow: 0 4px 10px rgba(0, 148, 150, 0.3),
+                0 0 10px rgba(32, 178, 170, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tours-table img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+.price {
+    font-weight: bold;
+    color: #000080; /* Azul Marino para el precio */
+    margin: 10px 0;
+}
+
+/* Sección de video */
+.video-section {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+.iframe-container {
+    margin: 20px 0;
+}
+
+/* 4. PROTOTIPO DE BOTONES */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 8px;
+    text-decoration: none;
+    border: none;
+    border-radius: 50px; /* Bordes redondeados para un aspecto moderno */
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón Principal (Azul Marino) */
+.btn-primary {
+    background-color: #000080; /* Azul Marino */
+    color: white;
+    padding: 10px 14px;      /* Menor espacio interno */
+    font-size: 0.9em;       /* Texto más pequeño */
+}
+
+.btn-primary:hover {
+    background-color: #061759; /* Azul Marino más oscuro al pasar el ratón */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(2, 51, 129, 0.2);
+}
+
+/* Botón Secundario (Turquesa) */
+.btn-secondary {
+    background-color: #009586; /* Turquesa */
+    color: #ffffff; /* Texto Azul Marino */
+    padding: 10px 14px;      /* Menor espacio interno */
+    font-size: 0.9em;   
+}
+
+.btn-secondary:hover {
+    background-color: #20b2aa; /* Turquesa más oscuro al pasar el ratón */
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón para enlaces de video/acción */
+.btn-video {
+    background-color: #cc0000; /* Rojo vibrante */
+    color: white;
+    box-shadow: 0 0 0 0 rgba(204, 0, 0, 0.7);
+    animation: pulse 1.5s infinite; /* Efecto de pulso para atraer la atención */
+}
+
+.btn-video:hover {
+    background-color: #ff0000;
+    transform: scale(1.05);
+}
+
+/* Animación de pulso para el botón de video */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(204, 0, 0, 0.5);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(204, 0, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(204, 0, 0, 0);
+    }
+}
+
+/* Estilo para el prototipo de botones */
+.prototype-title {
+    margin-top: 50px;
+}
+.button-prototype {
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 20px;
+    border: 2px dashed #000080;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
