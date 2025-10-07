@@ -188,53 +188,57 @@
             left: 0;
         }
         
-        .destinations-container {
+        .card {
             max-width: 1000px;
             margin: 3rem auto;
-            padding: 0 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .destination-card {
-            background: white;
+            padding: 2.5rem;
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
             overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s ease;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--secondary), var(--primary));
+        }
+        
+        h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px dashed var(--secondary);
+            display: inline-block;
             position: relative;
-            cursor: pointer;
         }
         
-        .destination-card:hover {
-            transform: translateY(-10px) scale(1.03);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        h3::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary);
         }
         
-        .card-header {
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
-            color: white;
-            padding: 1.2rem;
-            text-align: center;
-            position: relative;
-        }
-        
-        .card-header i {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-        
-        .card-content {
-            padding: 1.5rem;
-        }
-        
-        .destination-card ul {
+        ul {
             list-style-type: none;
+            margin-bottom: 1.5rem;
         }
         
-        .destination-card li {
+        li {
             margin-bottom: 0.8rem;
             padding: 0.8rem;
             background-color: var(--light);
@@ -243,12 +247,12 @@
             border-left: 4px solid var(--secondary);
         }
         
-        .destination-card li:hover {
+        li:hover {
             background-color: var(--accent);
             transform: translateX(5px);
         }
         
-        .destination-card a {
+        a {
             color: var(--primary);
             text-decoration: none;
             font-weight: 600;
@@ -257,55 +261,45 @@
             transition: color 0.3s ease;
         }
         
-        .destination-card a i {
+        a i {
             margin-right: 0.5rem;
             color: var(--secondary);
             transition: transform 0.3s ease;
         }
         
-        .destination-card a:hover {
+        a:hover {
             color: var(--secondary);
         }
         
-        .destination-card a:hover i {
+        a:hover i {
             transform: translateX(3px);
         }
         
-        .floating-btn {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
+        .team-link {
+            display: inline-flex;
             align-items: center;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
             color: white;
-            font-size: 1.5rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            z-index: 100;
-            animation: pulse 2s infinite;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
             transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         
-        .floating-btn:hover {
-            transform: scale(1.1);
-            animation: none;
+        .team-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
         
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(107, 170, 174, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 15px rgba(107, 170, 174, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(107, 170, 174, 0);
-            }
+        .team-link i {
+            margin-right: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .team-link:hover i {
+            transform: translateX(3px);
         }
         
         footer {
@@ -339,12 +333,8 @@
                 font-size: 2.2rem;
             }
             
-            section, .destinations-container {
+            section, .card {
                 margin: 2rem 1rem;
                 padding: 1.5rem;
-            }
-            
-            .destinations-container {
-                grid-template-columns: 1fr;
             }
         }
