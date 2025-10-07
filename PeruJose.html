@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sitio Turistico Perú</title>
+  
+  <!--Bootstrap y google front-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+
+  <style>
+    /* La zona de los colores los tengo en un blog de notas para no tener que escribirlo a mano */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #EDE2CD; /* Fondo */
+      color: #133951;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Merriweather', serif;
+    }
+
+    /* barra de navegacion */
+    .navbar {
+      background-color: #133951;
+    }
+
+    .navbar .nav-link {
+      color: #EDE2CD !important;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .navbar .nav-link:hover {
+      color: #6BAAAE !important;
+      text-decoration: underline;
+    }
+
+    .navbar .nav-link.active {
+      color: #6BAAAE !important;
+      font-weight: bold;
+    }
+
+    /* cabezera secciones */
+    section header {
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+
+    .bg-accent {
+      background-color: #6BAAAE;
+      color: #fff;
+    }
+
+    /* zona de las imagenes */
+    img {
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    /* Botón principal */
+    .btn-custom {
+      background-color: #133951;
+      color: #fff;
+      border: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #6BAAAE;
+      color: #133951;
+    }
+
+    /* Pie */
+    footer {
+      background-color: #133951;
+      color: #EDE2CD;
+    }
+
+    /* Secciones con fondo */
+    .section-colored {
+      background-color: #6BAAAE;
+      color: #fff;
+      padding: 3rem 1rem;
+      border-radius: 12px;
+    }
+   /* Fin de la zona de colores */ 
+  </style>
+</head>
+<body>
+
+  <!-- Barra de navegacion -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand text-white fw-bold" href="#">Turismo Perú</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#paisajes">Paisajes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gastronomia">Gastronomía</a></li>
+          <li class="nav-item"><a class="nav-link" href="#historia">Historia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#video">Video</a></li>
+          <li class="nav-item"><a class="nav-link" href="#precios">Precios</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="text-center py-5 mt-5">
+    <h1 class="display-3 fw-bold">PerúYork, un país de ensueño</h1>
+    <p class="lead">Descubre paisajes, cultura y sabores unicos</p>
+  </header>
+
+  <div class="container text-center mb-5">
+    <img src="https://phantom-elmundo.unidadeditorial.es/b32a9123473b14b736e0e53a78fd9f83/resize/646/f/webp/assets/multimedia/imagenes/2023/10/26/16983002973139.jpg" 
+         alt="Paisaje Perú" class="img-fluid">
+  </div>
+
+  <!-- Paisajes -->
+  <section id="paisajes" class="container mb-5">
+    <header class="bg-accent text-center py-3">
+      <h2 class="display-5">Parque Nacional y Hermosos Paisajes</h2>
+    </header>
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="https://consultasenlinea.mincetur.gob.pe/fichaInventario/foto.aspx?cod=429569" alt="Paisaje Perú" class="img-fluid mb-3">
+      </div>
+      <div class="col-md-6">
+        <p>
+          El Perú es un país con paisajes únicos que van desde montañas nevadas hasta selvas tropicales. 
+          En cada rincón, los turistas encuentran experiencias inolvidables conectadas con la naturaleza.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gastronomia zona wazaaaaaa -->
+  <section id="gastronomia" class="section-colored mb-5">
+    <div class="container">
+      <header class="text-center mb-4">
+        <h2 class="display-5">Cocina Peruana: Delicias para el Paladar</h2>
+      </header>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p>
+            La cocina peruana es reconocida mundialmente por su diversidad y exquisitez. 
+            Platos como el ají de gallina, el ceviche y el lomo saltado son solo algunas de las delicias que encantarán a los visitantes.
+          </p>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="https://trexperienceperu.com/sites/default/files/lomo_saltado_peru.jpg" alt="Cocina Peruana" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Historia -->
+  <section id="historia" class="container mb-5">
+    <header class="bg-accent text-center py-3">
+      <h2 class="display-5">Sitios Históricos Impresionantes</h2>
+    </header>
+    <div class="row">
+      <div class="col-md-8 mx-auto text-center">
+        <img src="https://freewalkingtoursperu.com/wp-content/uploads/2024/02/top-20-lugares-turisticos-del-peru_15.webp" alt="Historia Perú" class="img-fluid mb-3">
+        <p>
+          Machu Picchu, las Líneas de Nazca y la ciudad de Cusco son ejemplos de la riqueza histórica del Perú, 
+          que conecta el presente con su glorioso pasado inca y colonial.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video -->
+  <section id="video" class="container mb-5">
+    <div class="text-center mb-4">
+      <h2>Video sobre Perú</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-8 mx-auto text-center">
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/EnKQK-wOgMw?si=98q5szXB30TVcqC7" title="Video de Perú" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Precios -->
+  <section id="precios" class="container mb-5">
+    <header class="bg-accent text-center py-3 mb-4">
+      <h2 class="display-5">Precios</h2>
+    </header>
+    <div class="col-md-6 mx-auto">
+      <ul class="list-group shadow">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Machu Picchu <span class="badge bg-accent rounded-pill">$200</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Valle Sagrado <span class="badge bg-accent rounded-pill">$300</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Cusco <span class="badge bg-accent rounded-pill">$150</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Laguna Humantay <span class="badge bg-accent rounded-pill">$400</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Lima <span class="badge bg-accent rounded-pill">$1500</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Boton de regresar al lobby -->
+  <div class="text-center mb-5">
+    <a href="index.html" class="btn btn-custom btn-lg">Volver a la pagina principal</a>
+  </div>
+
+  <!-- piew de pagina -->
+  <footer class="text-center py-4">
+    <p class="mb-0">&copy; 2025 Turismo Perú - Todos los derechos reservados</p>
+  </footer>
+
+  <!-- Bootstrap J S -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
